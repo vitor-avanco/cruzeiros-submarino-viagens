@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cruzeiro Costa Favolosa</title>
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/helper.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style_crm.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href='https://www.submarinoviagens.com.br/travel/Styles_B2C/jquery-ui.css?v=20180202' rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog-theme-default.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/DrpBox.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/footer.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/social-login.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/services.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/login-timeout.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/styles_sub.css" rel="stylesheet" />
+    
+
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/header_site.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+</head>
+<body ng-app="siteCVC" id="Body1">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/app.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/responsiveboilerplate.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/intercambio/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- SITE-HEADER BEGIN -->
+    <header class="site-header" ng-app="general">
+        <div class="site-header-top clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+                        <div class="pl logo-site clearshadow">
+                            <a href="http://www.submarinoviagens.com.br">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo.png" alt="" width="102" height="75">
+                            </a>
+                        </div>
+                        <!-- / .logo-site -->
+                        <div class="pl logo-smallest">
+                            <a href="http://www.submarino.com.br" target="_blank">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo-smallest.png" alt="" width="86" height="22">
+                            </a>
+                        </div>
+                        <!-- / .logo-smallest -->
+                        <div class="pr">
+                            <ul class="list-info">
+                                <li>
+                                    <span>Televendas: <b>11 3003-2989</b></span>
+                                </li>
+
+                                
+                                
+                                <li>
+                                    <a href="https://www.submarinoviagens.com.br/login" target="_blank">Meus pedidos</a>
+                                </li>
+                            </ul>
+                            <!-- / .list-info -->
+                        </div>
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-top -->
+        <div class="site-header-middle clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+
+                        <div class="clear-header"></div>
+
+                        <div class="pl main-navigation">
+                            <ul>
+                                <li><a href="/passagens-aereas">passagens</a></li>
+                                <li><a href="/pacotes-turisticos">pacotes</a></li>                                    
+                                <li><a href="/hotel">hotéis</a></li>
+                                <li><a href="/resorts">resorts</a></li>
+                                <li><a href="/aluguel-de-carros">carros</a></li>
+                                
+                                <li><a href="/ingressos">ingressos</a></li>
+                                <li><a href="/promocoes">promoções</a></li>
+                                <li><a href="/promocoes/oferta-do-dia">oferta wow</a></li>
+                            </ul>
+                        </div>
+                        <!-- / .main-navigation -->
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-middle -->
+    </header>
+    <input type="hidden" value="1" id="agencyId" />
+    <input type="hidden" value="3" id="searchTypeFull" />
+
+    <div id="overlay" class="trace-manager-overlay"></div>
+    <div id="modal-opacity" class="ui-widget-overlay hide"></div>
+
+    <form id="continueForm" method="post" action="../MasterPricer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        <link href="lp-cruzeiros-2018.css" rel="stylesheet" />
+        
+
+
+        <div id="cruzeiro-banner" data-parallax="scroll" data-image-src="bg-cruzeiros.png"></div>
+        <div class="cruzeiro-menu">
+            <ul>
+                <li>
+                    <a href="#">Planeje seu Cruzeiro</a>
+                </li>
+                <li>
+                    <a href="#">Experiência a Bordo</a>
+                </li>
+                <li>
+                    <a href="#">Escolha seu Navio</a>
+                </li>
+                <li>
+                    <a href="#">Perguntas Frequentes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="siteContent">
+            <input id="InterfaceEnvelope" type="hidden" name="InterfaceEnvelope" />
+            <input id="Culture" type="hidden" name="Culture" />
+            <input id="SearchType" type="hidden" name="SearchType" />
+            <input id="Currency" type="hidden" name="Currency" />
+            <input id="ExchangeRate" type="hidden" name="ExchangeRate" />
+            <input id="SelectedCurrency" type="hidden" name="SelectedCurrency" />
+            <input id="QueryString" type="hidden" name="QueryString" />
+            
+                <div class="container lp-cruzeiros-container">
+                
+
+                    <div class="conteudo">
+                        <div class="lp-cruzeiros-2018">
+                            <div class="cruzeiros-topo">
+                                <h1 class="page-title">Cruzeiro <strong>MSC Magnifica</strong></h1>
+                                <a href="#" class="botao-reserve botao-formulario"> 
+                                    Clique aqui para <span>reservar o cruzeiro</span>
+                                </a>
+                            </div>
+
+                            <div class="cruzeiros-meio">
+                                <div class="cruzeiro-interna">
+                                    <div class="cruzeiro-texto">
+                                            <p>O <strong>MSC Magnifica</strong> combina conforto com design pioneiro e elegância. Suas três <strong>piscinas</strong> proporcionam um cenário perfeito para descanso, com muitas gincanas que agitam a viagem em alto mar. Para quem deseja <strong>relaxar</strong>, o MSC Aurea <strong>Spa</strong> possui saunas, banhos turcos, academia, salão de beleza e sala de talassoterapia. Saboreie deliciosas refeições nos quatro restaurantes, tome drinques coloridos nos bares e divirta-se como nunca na discoteca. </p>
+                                            
+                                            <p>Destaque também para o teatro e o <strong>cassino</strong>, além de espaços exclusivos para crianças e jovens. Um dos diferenciais do navio é de que 80% das suas cabines são externas e externas com varanda! Durante sua temporada na América do Sul, o MSC Magnifica faz paradas em <strong>Punta del Este</strong>, <strong>Buenos Aires</strong> e <strong>Montevidéu</strong>. Todos os seus roteiros começam e terminam em <strong>Santos</strong>. </p>  
+                                    </div>
+                                    <div class="cruzeiro-galeria">
+                                        <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013479.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013196.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013185.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013401.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013413.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013316.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013458.png')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-roteiro">
+                                        <div class="cruzeiro-tag-title">
+                                            Roteiro
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <center>
+                                        <ul class="cruzeiro-roteiro-pins">
+                                            <li>
+                                                <a href="#santos" class="ativo"><span class="icone"></span> Santos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#puntadeleste"><span class="icone"></span> Punta Del Este</a>
+                                            </li>
+                                            <li>
+                                                <a href="#buenosaires"><span class="icone"></span> Buenos Aires</a>
+                                            </li>
+                                            <li>
+                                                <a href="#montevideu"><span class="icone"></span> Montevidéu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#santos"><span class="icone"></span> Santos</a>
+                                            </li>
+                                        </ul>
+                                        </center>
+                                        <div class="cruzeiro-roteiro-conteudo">
+                                            <div class="cruzeiro-roteiro-conteudo-item ativo" data-rota="santos">
+                                                <div class="item-content">
+                                                    <h2>Santos</h2>
+                                                    <p>
+                                                       Maior e principal cidade do litoral paulista, <strong>Santos</strong> é ponto de embarque de muitos cruzeiros e vale muito a pena tirar umas horinhas para conhecer suas praias e patrimônio histórico. A cidade <strong>abriga o maior porto</strong> da América Latina, conta com vários programas culturais e artísticos, além da orla urbanizada, <strong>teatros</strong>, <strong>praças</strong> e a charmosa <strong>Linha Turística do Bonde</strong>.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/magnifica/santos.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="puntadeleste">
+                                                <div class="item-content">
+                                                    <h2>Punta Del Este</h2>
+                                                    <p>
+                                                        Localizada em um estreita faixa de areia entre o Atlântico e o Rio da Prata, <strong>Punta del Este</strong> tem praias para todos os estilos - desde as de águas calmas até as mais agitadas - uma grande variedade de lojas e galerias, calçadões para comtemplar a vista e <strong>restaurantes</strong> que agradam aos mais variados paladares.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/magnifica/punta.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="buenosaires">
+                                                <div class="item-content">
+                                                    <h2>Buenos Aires</h2>
+                                                    <p>
+                                                        A capital argentina é um dos destinos mais tradicionais do turismo, com destaque para os bairros de <strong>Puerto Madero</strong>, com suas atrações sofisticadas e o divertido La Boca, onde fica o Caminito e o histórico estádio La Bombonera. Buenos Aires ainda encanta com o <strong>tango </strong>e a deliciosa <strong>gastronomia</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/magnifica/buenosaires.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="montevideu">
+                                                <div class="item-content">
+                                                    <h2>Montevidéu</h2>
+                                                    <p>
+                                                            Relativamente pequena em comparação com outras capitais sul-americanas, Montevidéu tem clima tranquilo de <strong>interior</strong>, com um Centro Hitórico repleto de <strong>casarões coloniais, parques, praças e museus</strong>. Curta ainda as Ramblas, calçadões com vista para Rio Prata, com ciclovias e áreas de descanso.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/magnifica/montevideu.png')"></div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiro-roteiro-pins li a').click(function(){
+                                                $('.cruzeiro-roteiro-pins li a').removeClass('ativo');
+                                                $(this).addClass('ativo');
+                                                let pinSelecionado = $(this).attr('href').replace('#','');
+                                                $('.cruzeiro-roteiro-conteudo-item').removeClass('ativo');
+                                                $('.cruzeiro-roteiro-conteudo-item[data-rota='+pinSelecionado+']').addClass('ativo');
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="cruzeiro-ficha-tecnica">
+                                        <div class="cruzeiro-tag-title">
+                                            Ficha Técnica
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <ul>
+                                            <li><strong>Cia marítima:</strong> MSC</li>
+                                            <li><strong>Tonelagem:</strong>  95.128</li>
+                                            <li><strong>Velocidade em nós:</strong> 22</li>
+                                            <li><strong>Comprimento:</strong> 293 metros</li>
+                                            <li><strong>Passageiros:</strong> 3.223</li>
+                                            <li><strong>Tripulação:</strong> 1.038</li>
+                                            <li><strong>Decks:</strong> 16</li>
+                                            <li><strong>Voltagem:</strong> 110/220 volts</li>
+                                            <li><strong>Número de cabines:</strong> 1.259</li>
+                                        </ul>
+                                    </div>
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013381.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013427.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013499.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/magnifica/MSC13013348.png')"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-rosa">Cabines</h2>
+                                            <p>As cabines do navio contam com secador de cabelo, TV, telefone, cofre, ar-condicionado, frigobar, amplo armário e cama de casal conversível em duas camas de solteiro. Algumas acomodam até quatro pessoas. </p>
+                                            <p><strong class="fonte-rosa">Interna:</strong> com <strong>13 m²</strong>, proporciona um ótimo custo/benefício</p>
+                                            <p><strong class="fonte-rosa">Externa:</strong> : tem <strong>16 m²</strong> e possui uma escotilha com vista para o mar</p>
+                                            <p><strong class="fonte-rosa">Externa com varanda:</strong> mede <strong>20 m²</strong>. Algumas podem ser adaptadas a portadores de necessidades especiais</p>
+                                            <p><strong class="fonte-rosa">Suíte Aurea com Varanda:</strong> com banheira, tem <strong>31 m²</strong></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Mascote Doremi</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O mascote dos navios MSC chama-se Doremi e participa de várias atividades voltadas para as crianças, como show de talentos, workshop de artesanato e também aulas de culinária.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Bebês</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O Babytime oferece atividades para os bebês de até 3 anos, sempre acompanhados dos pais</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Clube infantil e para adolescentes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O MSC Magnifica tem quatro clubes: Mini (de 3 a 6 anos), Junior’s (de 7 a 11 anos), Young (de 12 a 14 anos) e Teens (de 15 a 17 anos).</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Boliche</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>As pistas de miniboliche disponibilizam pequenas bolas para as crianças demonstrarem todas as suas habilidades na brincadeira</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Atividades noturnas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O MSC Magnifica conta com cassino, belas apresentações teatrais, espetáculos circenses e musicais com produção ao estilo Broadway. Festas temáticas, discoteca e música ao vivo nos bares são outras opções de diversão noturna.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Cuba Lounge Cigar Room</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O lounge é o ambiente perfeito para fumar um bom charuto cubano e jogar conversa fora.</p>
+                                                    </div>
+                                                </div>                                                    
+                                            </div>
+                                        </div>
+
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde transparent">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                        
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>MSC Aurea Spa</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Perfeito para relaxar, o MSC Aurea Spa conta com banhos turcos, área de relaxamento, salas de massagem e centro de talassoterapia, ou seja, terapias com água marinha.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Esportes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>A bordo, o hóspede corre na pista de cooper, malha na academia, além de jogar tênis, basquete e bilhar.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Recreação diária</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>As atividades incluem gincanas, torneios, aulas de dança e ginástica, workshops de artesanato, olimpíadas aquáticas e muito mais.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Área das piscinas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O navio tem três piscinas, uma delas tem teto retrátil.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Cinema 4D</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Além de enxergar as imagens em terceira dimensão, o espectador tem as sensações dos personagens, como pingos de água ou o frio de uma ventania, de acordo com o filme em cartaz. Atividade paga à parte.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Gastronomia</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Neste cruzeiro, estão incluídas as refeições: café da manhã, almoço, chá da tarde, jantar e snacks da madrugada. Os restaurantes principais Quattro Venti e L’Edera apresentam uma gastronomia de primeira qualidade e servem pães preparados no próprio navio, frutos do mar, carne, frango e saborosas sobremesas. O Buffet Sahara oferece pratos rápidos. Fica próximo à piscina, e assim não é preciso trocar de roupa na hora do almoço.</p>
+                                                        <p>
+                                                        No Oriental Plaza os chefs preparam manualmente sushis e outras delícias típicas do Oriente e pode ser apreciado mediante reserva e pagamento de taxa extra. Entre os 13 bares e lounges do MSC Magnifica, estão o Tiger Bar, com shows de música, pista de dança e coquetéis; os bares La Conchiglia e Il Bar del Sole, que servem bebidas e sorvetes ao ar livre, na área das piscinas; e o Purple Bar, que disponibiliza cafés, drinques e petiscos deliciosos.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').click(function(){
+                                                if(!$(this).hasClass('ativo')){
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').removeClass('ativo');
+                                                    $(this).addClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                    $(this).parent().find('.cruzeiros-accordion-content').stop().slideDown();
+                                                }else{
+                                                    $(this).removeClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                }
+                                                
+                                            })
+                                        </script>
+                                    </div>
+
+                                    <div class="divisor"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="lp-cruzeiros-footer">
+            <div class="container">
+                <h3>FORMAS DE <strong>PAGAMENTO</strong></h3>
+                <ul>
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/cartao.png" >
+                        <span>Parcele no <strong>cartão</strong><br>c/ ou s/ entrada</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/boleto.png" >
+                        <span><strong>Boleto</strong><br>bancário</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/avista.png" >
+                        <span>Pagamento<br><strong>à vista</strong></span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/2cartoes.png" >
+                        <span>Combinação<br><strong>de 2 cartões</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+                $('.cruzeiro-iniciar-carrossel.owl-carousel').owlCarousel({
+                    loop:true,
+                    nav:false,
+                    dots: true,
+                    singleItem: true,
+                    autoplay: true,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                })
+            </script>
+    </form>
+    </body>
+</html>

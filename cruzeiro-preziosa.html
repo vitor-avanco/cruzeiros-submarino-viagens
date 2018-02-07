@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cruzeiro MSC Preciosa</title>
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/helper.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style_crm.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href='https://www.submarinoviagens.com.br/travel/Styles_B2C/jquery-ui.css?v=20180202' rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog-theme-default.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/DrpBox.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/footer.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/social-login.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/services.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/login-timeout.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/styles_sub.css" rel="stylesheet" />
+    
+
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/header_site.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+</head>
+<body ng-app="siteCVC" id="Body1">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/app.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/responsiveboilerplate.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/intercambio/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- SITE-HEADER BEGIN -->
+    <header class="site-header" ng-app="general">
+        <div class="site-header-top clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+                        <div class="pl logo-site clearshadow">
+                            <a href="http://www.submarinoviagens.com.br">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo.png" alt="" width="102" height="75">
+                            </a>
+                        </div>
+                        <!-- / .logo-site -->
+                        <div class="pl logo-smallest">
+                            <a href="http://www.submarino.com.br" target="_blank">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo-smallest.png" alt="" width="86" height="22">
+                            </a>
+                        </div>
+                        <!-- / .logo-smallest -->
+                        <div class="pr">
+                            <ul class="list-info">
+                                <li>
+                                    <span>Televendas: <b>11 3003-2989</b></span>
+                                </li>
+
+                                
+                                
+                                <li>
+                                    <a href="https://www.submarinoviagens.com.br/login" target="_blank">Meus pedidos</a>
+                                </li>
+                            </ul>
+                            <!-- / .list-info -->
+                        </div>
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-top -->
+        <div class="site-header-middle clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+
+                        <div class="clear-header"></div>
+
+                        <div class="pl main-navigation">
+                            <ul>
+                                <li><a href="/passagens-aereas">passagens</a></li>
+                                <li><a href="/pacotes-turisticos">pacotes</a></li>                                    
+                                <li><a href="/hotel">hotéis</a></li>
+                                <li><a href="/resorts">resorts</a></li>
+                                <li><a href="/aluguel-de-carros">carros</a></li>
+                                
+                                <li><a href="/ingressos">ingressos</a></li>
+                                <li><a href="/promocoes">promoções</a></li>
+                                <li><a href="/promocoes/oferta-do-dia">oferta wow</a></li>
+                            </ul>
+                        </div>
+                        <!-- / .main-navigation -->
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-middle -->
+    </header>
+    <input type="hidden" value="1" id="agencyId" />
+    <input type="hidden" value="3" id="searchTypeFull" />
+
+    <div id="overlay" class="trace-manager-overlay"></div>
+    <div id="modal-opacity" class="ui-widget-overlay hide"></div>
+
+    <form id="continueForm" method="post" action="../MasterPricer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        <link href="lp-cruzeiros-2018.css" rel="stylesheet" />
+        
+
+
+        <div id="cruzeiro-banner" data-parallax="scroll" data-image-src="bg-cruzeiros.png"></div>
+        <div class="cruzeiro-menu">
+            <ul>
+                <li>
+                    <a href="#">Planeje seu Cruzeiro</a>
+                </li>
+                <li>
+                    <a href="#">Experiência a Bordo</a>
+                </li>
+                <li>
+                    <a href="#">Escolha seu Navio</a>
+                </li>
+                <li>
+                    <a href="#">Perguntas Frequentes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="siteContent">
+            <input id="InterfaceEnvelope" type="hidden" name="InterfaceEnvelope" />
+            <input id="Culture" type="hidden" name="Culture" />
+            <input id="SearchType" type="hidden" name="SearchType" />
+            <input id="Currency" type="hidden" name="Currency" />
+            <input id="ExchangeRate" type="hidden" name="ExchangeRate" />
+            <input id="SelectedCurrency" type="hidden" name="SelectedCurrency" />
+            <input id="QueryString" type="hidden" name="QueryString" />
+            
+                <div class="container lp-cruzeiros-container">
+                
+
+                    <div class="conteudo">
+                        <div class="lp-cruzeiros-2018">
+                            <div class="cruzeiros-topo">
+                                <h1 class="page-title">Cruzeiro <strong>MSC Preziosa</strong></h1>
+                                <a href="#" class="botao-reserve botao-formulario"> 
+                                    Clique aqui para <span>reservar o cruzeiro</span>
+                                </a>
+                            </div>
+
+                            <div class="cruzeiros-meio">
+                                <div class="cruzeiro-interna">
+                                    <div class="cruzeiro-texto">
+                                            <p>Uma perfeita combinação de luxo, conforto e tecnologia. O MSC Preziosa encanta seus hóspedes logo na entrada, com uma escadaria com degraus de cristal Swarovski e <strong>decoração refinada</strong>. Com uma completa estrutura de lazer, o navio possui quatro piscinas, incluindo uma com borda infinita na popa, <strong>12 hidromassagens, toboágua Vertigo e solário</strong>. Outra atração imperdível é o simulador de Fórmula 1, onde é possível viver a sensação de ser um piloto de provas. As crianças e os adultos também se surpreendem com a experiência do cinema 4D.</p>
+                                            
+                                            <p>O MSC Preziosa passa por <strong>Ilhabela, no litoral paulista, Búzios e Ilha Grande</strong>, no Rio de Janeiro, Camboriú e Porto Belo, em Santa Catarina, e Salvador e Ilhéus, na Bahia. Depois de um passeio divertido nas cidades de parada, aproveite a programação de recreação a bordo, a academia equipada com aparelhos de última geração, <strong>pista de jogging</strong> ao ar livre e a <strong>sala de videogames</strong>. E não precisa se preocupar com as crianças, que têm uma área exclusiva e segura, com programação para todas as faixas etárias, com supervisão de monitores treinados. Confira ainda o <strong>MSC Yacht Club</strong>, onde o hóspede tem privilégios como check-in e check-out prioritários, concierge, acesso direto ao spa, piscina e bar exclusivos, restaurante privativo e bebidas incluídas.</p>  
+                                    </div>
+                                    <div class="cruzeiro-galeria">
+                                        <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014948.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC14000322.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014793.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014787.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC14000325.png')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-roteiro">
+                                        <div class="cruzeiro-tag-title">
+                                            Roteiro
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <center>
+                                        <ul class="cruzeiro-roteiro-pins">
+                                            <li>
+                                                <a href="#santos" class="ativo"><span class="icone"></span> Santos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#buzios"><span class="icone"></span>Búzios</a>
+                                            </li>
+                                            <li>
+                                                <a href="#salvador"><span class="icone"></span> Salvador</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ilheus"><span class="icone"></span> Ilhéus</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ilhagrande"><span class="icone"></span> Ilha Grande</a>
+                                            </li>
+                                            <li>
+                                                <a href="#santos"><span class="icone"></span> Santos</a>
+                                            </li>
+                                        </ul>
+                                        </center>
+                                        <div class="cruzeiro-roteiro-conteudo">
+                                            <div class="cruzeiro-roteiro-conteudo-item ativo" data-rota="santos">
+                                                <div class="item-content">
+                                                    <h2>Santos</h2>
+                                                    <p>
+                                                       Maior e principal cidade do litoral paulista, <strong>Santos</strong> é ponto de embarque de muitos cruzeiros e vale muito a pena tirar umas horinhas para conhecer suas praias e patrimônio histórico. A cidade <strong>abriga o maior porto</strong> da América Latina, conta com vários programas culturais e artísticos, além da orla urbanizada, <strong>teatros</strong>, <strong>praças</strong> e a charmosa <strong>Linha Turística do Bonde</strong>.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/magnifica/santos.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="buzios">
+                                                <div class="item-content">
+                                                    <h2>Búzios</h2>
+                                                    <p>
+                                                        Um dos destinos mais famosos da <strong>Região dos Lagos</strong>, no Rio de Janeiro, Búzios é repleta de belezas naturais. Ficou conhecida em todo mundo depois da atriz francesa Brigitte Bardot visitar a cidade nos anos 60. Charmosa e com <strong>praias de águas cristalinas</strong>, a antiga vila de pescadores é agora pontuada por boates e <strong>bares descolados</strong> e muitas lojas de grife.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/buzios.png')"></div>
+                                            </div>
+
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="salvador">
+                                                <div class="item-content">
+                                                    <h2>Salvador</h2>
+                                                    <p>
+                                                        Salvador, uma das cidades mais interessantes do país, é uma mistura de credos, <strong>culturas</strong> e <strong>raças</strong>, com <strong>astral único</strong> e abençoada com sol praticamente o ano inteiro. Confira seus prédios históricos, igrejas seculares, praias, restaurantes e o agito que só a <strong>capital baiana</strong> pode oferecer.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/salvador.png')"></div>
+                                            </div>
+
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="ilheus">
+                                                <div class="item-content">
+                                                    <h2>Ilhéus</h2>
+                                                    <p>
+                                                        Terra dos antigos coronéis do cacau, a cidade do litoral da Bahia foi imortalizada nos romances de Jorge Amado. O Centro conta com muitas construções históricas conservadas do auge da produção de cacau e várias fazendas produtoras do fruto, além de belas praias.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/preziosa/ilheus.png')"></div>
+                                            </div>
+
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="ilhagrande">
+                                                <div class="item-content">
+                                                    <h2>Ilha Grande</h2>
+                                                    <p>
+                                                            Ilha Grande é a maior das ilhas da baía de Angra dos Reis. Foi palco de várias batalhas marítimas e muitos naufrágios podem ser vistos por mergulhadores na região. Entre as principais praias, estão a Lopes Mendes, bastante procurada para mergulho, e a pequena Cachadaço, com o bônus de uma piscina natural.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/preziosa/ilhagrande.png')"></div>
+                                            </div>
+
+
+                                        </div>
+                                        <script>
+                                            $('.cruzeiro-roteiro-pins li a').click(function(){
+                                                $('.cruzeiro-roteiro-pins li a').removeClass('ativo');
+                                                $(this).addClass('ativo');
+                                                let pinSelecionado = $(this).attr('href').replace('#','');
+                                                $('.cruzeiro-roteiro-conteudo-item').removeClass('ativo');
+                                                $('.cruzeiro-roteiro-conteudo-item[data-rota='+pinSelecionado+']').addClass('ativo');
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="cruzeiro-ficha-tecnica">
+                                        <div class="cruzeiro-tag-title">
+                                            Ficha Técnica
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <ul>
+                                            <li><strong>Cia marítima:</strong> MSC</li>
+                                            <li><strong>Tonelagem:</strong>  139.072</li>
+                                            <li><strong>Velocidade em nós:</strong> 24</li>
+                                            <li><strong>Comprimento:</strong> 333 metros</li>
+                                            <li><strong>Passageiros:</strong> 4.345</li>
+                                            <li><strong>Tripulação:</strong> 1.388</li>
+                                            <li><strong>Decks:</strong> 18</li>
+                                            <li><strong>Voltagem:</strong> 110/220 volts</li>
+                                            <li><strong>Número de cabines:</strong> 1.751</li>
+                                        </ul>
+                                    </div>
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014771.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014913.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014893.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/preziosa/MSC13014835.png')"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-rosa">Cabines</h2>
+                                            <p>As cabines têm secador de cabelo, TV, telefone, cofre, ar-condicionado, frigobar, amplo armário e cama de casal conversível em duas camas de solteiro. Algumas acomodam até quatro pessoas.</p>
+                                            <p><strong class="fonte-rosa">Interna:</strong> com ótimo custo/benefício, essa cabine tem 16 m².</p>
+                                            <p><strong class="fonte-rosa">Externa:</strong> com 18 m², tem janela panorâmica com vista para o mar.</p>
+                                            <p><strong class="fonte-rosa">Suite Aurea:</strong> conta com 23 m² e tem sala de estar com sofá. Pode contar com janela panorâmica ou varanda.</p>
+                                            <p><strong class="fonte-rosa">Suíte MSC Yacht Club:</strong> disponibiliza lençóis e roupões de algodão egípcio, varanda e banheira, além de acesso direto ao spa e às áreas do MSC Yacht Club. A Suíte Deluxe tem 29 m².  A Suíte Executiva e Familiar possui janela panorâmica e tem 45 m². A Royal Suíte tem 52 m².</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Parque aquático</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O playground aquático Castelo Doremi tem muitos jatos d’água, fontes, baterias de canhões e um enorme balde que, quando fica cheio, despeja muita água sobre as cabeças dos desavisados.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Bebês</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O Babytime oferece atividades para os bebês de até 3 anos, que devem estar acompanhados dos pais.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Miniboliche</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>As pistas de miniboliche disponibilizam pequenas bolas para as crianças demonstrarem todas as suas habilidades na brincadeira.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Clubes para crianças e adolescentes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O navio tem quatro clubes: Mini (de 3 a 6 anos), Junior’s (de 7 a 11 anos), Young (de 12 a 14 anos) e Teens (de 15 a 17 anos). Funcionam das 9h às 23h.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Atividades noturnas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O navio MSC Preziosa conta com cassino, apresentações teatrais, espetáculos circenses e musicais com produção no estilo Broadway. Festas temáticas, discoteca e música ao vivo nos bares são outras opções de diversão noturna.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Compras</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O navio possui várias lojas de produtos de famosas grifes internacionais, como Swarovski, Montblanc, Michael Kors, Lacoste, Adidas, Nike, Prada, Guess e Puma. Ninguém resiste a fazer umas comprinhas a bordo.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Spa</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>O MSC Aurea Spa conta com uma extensa lista de terapias para sua saúde e bem-estar. É possível fazer uma massagem relaxante, drenagem linfática, tratamento facial e diversos outros procedimentos realizados por profissionais treinados.</p>
+                                                    </div>
+                                                </div>                                                     
+                                            </div>
+                                        </div>
+
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde transparent">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                        
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Recreação diária</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>As atividades para a família incluem gincanas, torneios, aulas de dança e ginástica, workshops de artesanato, olimpíadas aquáticas e muito mais.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Área das piscinas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O navio tem quatro piscinas, incluindo uma com borda infinita, 12 hidromassagens, toboágua e solário.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Toboágua Vertigo</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Instalado no alto do deck 18, o Toboágua Vertigo tem 120 metros de muitas curvas, proporcionando aquele frio na barriga! Durante o trajeto em um tubo transparente, o hóspede também tem uma surpreendente visão do mar.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Cinema 4D</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Além de enxergar as imagens em terceira dimensão, o espectador tem as sensações dos personagens, como pingos de água ou o frio de uma ventania. Atividade paga à parte.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Simulador de F-1</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Você se sentirá um piloto de Fórmula 1 nesse simulador, com luzes verdes piscando, pit-stop, ultrapassagens incríveis e até a bandeira quadriculada. Atividade paga à parte.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Jogos eletrônicos</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>A sala de videogame oferece uma ampla variedade de jogos para todas as idades (pagos à parte).</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Gastronomia</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Todas as refeições estão incluídas: café da manhã, almoço, chá da tarde, jantar e snacks da madrugada. Nos bufês, o ambiente é informal, servindo carnes, pratos nacionais e internacionais, menu infantil, saladas, frutas, frios e queijos. O restaurante principal conta com menu à la carte, pratos mediterrâneos e especialidades regionais. O Galaxy Lounge é um lounge panorâmico circular que mescla discoteca e restaurante de pratos variados (mediante reserva e taxa extra). No Ristorante Italia, aberto no jantar, você encontra culinária que valoriza os pequenos produtores italianos (mediante reserva e taxa extra). </p><p>O Restaurante Eataly serve pratos italianos e vende produtos como azeite de oliva da região da Ligúria (mediante reserva e taxa extra). Já o La Palmeraie é um restaurante panorâmico exclusivo para os hóspedes do MSC Yacht Club, que oferece menus únicos e sofisticados, com bebidas e o melhor da coquetelaria internacional. Por fim, o Bar The Green Sax é decorado com feixes de luzes caleidoscópicos. Esse bar de jazz tem música ao vivo e diversos coquetéis.</p>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').click(function(){
+                                                if(!$(this).hasClass('ativo')){
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').removeClass('ativo');
+                                                    $(this).addClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                    $(this).parent().find('.cruzeiros-accordion-content').stop().slideDown();
+                                                }else{
+                                                    $(this).removeClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                }
+                                                
+                                            })
+                                        </script>
+                                    </div>
+
+                                    <div class="divisor"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="lp-cruzeiros-footer">
+            <div class="container">
+                <h3>FORMAS DE <strong>PAGAMENTO</strong></h3>
+                <ul>
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/cartao.png" >
+                        <span>Parcele no <strong>cartão</strong><br>c/ ou s/ entrada</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/boleto.png" >
+                        <span><strong>Boleto</strong><br>bancário</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/avista.png" >
+                        <span>Pagamento<br><strong>à vista</strong></span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/2cartoes.png" >
+                        <span>Combinação<br><strong>de 2 cartões</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+                $('.cruzeiro-iniciar-carrossel.owl-carousel').owlCarousel({
+                    loop:true,
+                    nav:false,
+                    dots: true,
+                    singleItem: true,
+                    autoplay: true,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                })
+            </script>
+    </form>
+    </body>
+</html>

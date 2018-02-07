@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cruzeiro Costa Favolosa</title>
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/helper.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style_crm.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href='https://www.submarinoviagens.com.br/travel/Styles_B2C/jquery-ui.css?v=20180202' rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog-theme-default.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/DrpBox.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/footer.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/social-login.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/services.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/login-timeout.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/styles_sub.css" rel="stylesheet" />
+    
+
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/header_site.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+</head>
+<body ng-app="siteCVC" id="Body1">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/app.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/responsiveboilerplate.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/intercambio/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- SITE-HEADER BEGIN -->
+    <header class="site-header" ng-app="general">
+        <div class="site-header-top clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+                        <div class="pl logo-site clearshadow">
+                            <a href="http://www.submarinoviagens.com.br">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo.png" alt="" width="102" height="75">
+                            </a>
+                        </div>
+                        <!-- / .logo-site -->
+                        <div class="pl logo-smallest">
+                            <a href="http://www.submarino.com.br" target="_blank">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo-smallest.png" alt="" width="86" height="22">
+                            </a>
+                        </div>
+                        <!-- / .logo-smallest -->
+                        <div class="pr">
+                            <ul class="list-info">
+                                <li>
+                                    <span>Televendas: <b>11 3003-2989</b></span>
+                                </li>
+
+                                
+                                
+                                <li>
+                                    <a href="https://www.submarinoviagens.com.br/login" target="_blank">Meus pedidos</a>
+                                </li>
+                            </ul>
+                            <!-- / .list-info -->
+                        </div>
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-top -->
+        <div class="site-header-middle clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+
+                        <div class="clear-header"></div>
+
+                        <div class="pl main-navigation">
+                            <ul>
+                                <li><a href="/passagens-aereas">passagens</a></li>
+                                <li><a href="/pacotes-turisticos">pacotes</a></li>                                    
+                                <li><a href="/hotel">hotéis</a></li>
+                                <li><a href="/resorts">resorts</a></li>
+                                <li><a href="/aluguel-de-carros">carros</a></li>
+                                
+                                <li><a href="/ingressos">ingressos</a></li>
+                                <li><a href="/promocoes">promoções</a></li>
+                                <li><a href="/promocoes/oferta-do-dia">oferta wow</a></li>
+                            </ul>
+                        </div>
+                        <!-- / .main-navigation -->
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-middle -->
+    </header>
+    <input type="hidden" value="1" id="agencyId" />
+    <input type="hidden" value="3" id="searchTypeFull" />
+
+    <div id="overlay" class="trace-manager-overlay"></div>
+    <div id="modal-opacity" class="ui-widget-overlay hide"></div>
+
+    <form id="continueForm" method="post" action="../MasterPricer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        <link href="lp-cruzeiros-2018.css" rel="stylesheet" />
+        
+
+
+        <div id="cruzeiro-banner" data-parallax="scroll" data-image-src="bg-cruzeiros.png"></div>
+        <div class="cruzeiro-menu">
+            <ul>
+                <li>
+                    <a href="#">Planeje seu Cruzeiro</a>
+                </li>
+                <li>
+                    <a href="#">Experiência a Bordo</a>
+                </li>
+                <li>
+                    <a href="#">Escolha seu Navio</a>
+                </li>
+                <li>
+                    <a href="#">Perguntas Frequentes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="siteContent">
+            <input id="InterfaceEnvelope" type="hidden" name="InterfaceEnvelope" />
+            <input id="Culture" type="hidden" name="Culture" />
+            <input id="SearchType" type="hidden" name="SearchType" />
+            <input id="Currency" type="hidden" name="Currency" />
+            <input id="ExchangeRate" type="hidden" name="ExchangeRate" />
+            <input id="SelectedCurrency" type="hidden" name="SelectedCurrency" />
+            <input id="QueryString" type="hidden" name="QueryString" />
+            
+                <div class="container lp-cruzeiros-container">
+                
+
+                    <div class="conteudo">
+                        <div class="lp-cruzeiros-2018">
+                            <div class="cruzeiros-topo">
+                                <h1 class="page-title">Cruzeiro <strong>Costa Favolosa</strong></h1>
+                                <a href="#" class="botao-reserve botao-formulario"> 
+                                    Clique aqui para <span>reservar o cruzeiro</span>
+                                </a>
+                            </div>
+
+                            <div class="cruzeiros-meio">
+                                <div class="cruzeiro-interna">
+                                    <div class="cruzeiro-texto">
+                                            <p>Inspirado em um castelo de conto de fadas, o navio <strong>Costa Favolosa</strong> é ideal para quem deseja ter uma viagem de sonhos!  O viajante desfruta de serviços como <strong>spa, academia, lojas</strong> e <strong>restaurantes requintados</strong>, se diverte nas <strong>quatro piscinas</strong>, sendo uma com <strong>teto retrátil</strong>, e nas <strong>cinco hidromassagens</strong>, onde a família inteira pode desfrutar de momentos de relaxamento.</p>
+                                            
+                                            <p>Aproveite para praticar atividades físicas, acompanhado de um instrutor, na academia ou em <strong>partidas de vôlei, futebol e basquete</strong> nas quadras poliesportivas, utilize a pista de cooper ao ar livre e desfrute da completa programação de lazer organizada pelos monitores de recreação. Na hora de relaxar e se cuidar, seu refúgio é o Samsara Spa, que tem <strong>salão de beleza</strong> e os mais diversos tratamentos. No roteiro de viagem estão a região do Prata, pernoitando em <strong>Buenos Aires</strong> e visitando <strong>Montevidéu</strong>, além de fazer viagens para <strong>Salvador</strong> e cruzeiros.</p>  
+                                    </div>
+                                    <div class="cruzeiro-galeria">
+                                        <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00015985.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00015942.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00016080.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00016170.png')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-roteiro">
+                                        <div class="cruzeiro-tag-title">
+                                            Roteiro
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <center>
+                                        <ul class="cruzeiro-roteiro-pins">
+                                            <li>
+                                                <a href="#santos" class="ativo"><span class="icone"></span> Santos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#buzios"><span class="icone"></span> Búzios</a>
+                                            </li>
+                                            <li>
+                                                <a href="#salvador"><span class="icone"></span> Salvador</a>
+                                            </li>
+                                            <li>
+                                                <a href="#ilhabela"><span class="icone"></span> Ilhabela</a>
+                                            </li>
+                                            <li>
+                                                <a href="#santos"><span class="icone"></span> Santos</a>
+                                            </li>
+                                        </ul>
+                                        </center>
+                                        <div class="cruzeiro-roteiro-conteudo">
+                                            <div class="cruzeiro-roteiro-conteudo-item ativo" data-rota="santos">
+                                                <div class="item-content">
+                                                    <h2>Santos</h2>
+                                                    <p>
+                                                       Maior e principal cidade do litoral paulista, <strong>Santos</strong> é ponto de embarque de muitos cruzeiros e vale muito a pena tirar umas horinhas para conhecer suas praias e patrimônio histórico. A cidade <strong>abriga o maior porto</strong> da América Latina, conta com vários programas culturais e artísticos, além da orla urbanizada, <strong>teatros</strong>, <strong>praças</strong> e a charmosa <strong>Linha Turística do Bonde</strong>.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/santos.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="buzios">
+                                                <div class="item-content">
+                                                    <h2>Búzios</h2>
+                                                    <p>
+                                                        Um dos destinos mais famosos da <strong>Região dos Lagos</strong>, no Rio de Janeiro, Búzios é repleta de belezas naturais. Ficou conhecida em todo mundo depois da atriz francesa Brigitte Bardot visitar a cidade nos anos 60. Charmosa e com <strong>praias de águas cristalinas</strong>, a antiga vila de pescadores é agora pontuada por boates e <strong>bares descolados</strong> e muitas lojas de grife.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/buzios.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="salvador">
+                                                <div class="item-content">
+                                                    <h2>Salvador</h2>
+                                                    <p>
+                                                        Salvador, uma das cidades mais interessantes do país, é uma mistura de credos, <strong>culturas</strong> e <strong>raças</strong>, com <strong>astral único</strong> e abençoada com sol praticamente o ano inteiro. Confira seus prédios históricos, igrejas seculares, praias, restaurantes e o agito que só a <strong>capital baiana</strong> pode oferecer.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/salvador.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="ilhabela">
+                                                <div class="item-content">
+                                                    <h2>Ilhabela</h2>
+                                                    <p>
+                                                        Com 130 km de costa, a ilha do litoral norte paulista conta com <strong>42 praias de águas cristalinas</strong> e 83% de área preservada por um parque estadual. Como se não bastasse tantas belezas, você ainda pode escolher entre as centenas de <strong>cachoeiras</strong> e fazer <strong>mergulhos</strong> entre naufrágios.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/ilhabela.png')"></div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiro-roteiro-pins li a').click(function(){
+                                                $('.cruzeiro-roteiro-pins li a').removeClass('ativo');
+                                                $(this).addClass('ativo');
+                                                let pinSelecionado = $(this).attr('href').replace('#','');
+                                                $('.cruzeiro-roteiro-conteudo-item').removeClass('ativo');
+                                                $('.cruzeiro-roteiro-conteudo-item[data-rota='+pinSelecionado+']').addClass('ativo');
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="cruzeiro-ficha-tecnica">
+                                        <div class="cruzeiro-tag-title">
+                                            Ficha Técnica
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <ul>
+                                            <li><strong>Cia marítima:</strong> Costa Cruzeiros</li>
+                                            <li><strong>Tonelagem:</strong> 114.500</li>
+                                            <li><strong>Velocidade em nós:</strong> 23</li>
+                                            <li><strong>Comprimento:</strong> 290 metros</li>
+                                            <li><strong>Passageiros:</strong> 3.800</li>
+                                            <li><strong>Tripulação:</strong> 1.110</li>
+                                            <li><strong>Decks:</strong> 17</li>
+                                            <li><strong>Voltagem:</strong> 110/220 volts</li>
+                                            <li><strong>Número de cabines:</strong> 1.508</li>
+                                        </ul>
+                                    </div>
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00015985.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00015942.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00016080.png')"></div>
+                                                <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/favolosa/00016170.png')"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-rosa">Cabines</h2>
+                                            <p>As cabines do navio têm secador de cabelo, TV, telefone, cofre, frigobar, amplo armário e cama de casal conversível em duas camas de solteiro. Algumas acomodam até quatro pessoas. As metragens abaixo são aproximadas.</p>
+                                            <p><strong class="fonte-rosa">Interna:</strong> com 13 m², é ótima opção para quem busca conforto e economia</p>
+                                            <p><strong class="fonte-rosa">Externa:</strong> : com 14 m², tem janela com vista para o mar</p>
+                                            <p><strong class="fonte-rosa">Externa com varanda:</strong> tem 19 m² e varanda para desfrutar da navegação com privacidade</p>
+                                            <p><strong class="fonte-rosa">Suíte com Varanda:</strong> com 27 m² , possui varanda e também banheira.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Recreação diária</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>A família toda se diverte a bordo, com atividades que vão de gincanas na área da piscina a workshops de artesanato e aulas de dança de salão com monitores.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Área das Piscinas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O navio tem quatro piscinas, sendo uma dela com teto retrátil, e cinco hidromassagens relaxantes.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>The Voice of The Sea</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Esta superprodução recria o cenário e as dinâmicas do famoso programa de TV. Você pode exibir seu talento no palco ou ainda participar na plateia, escolhendo os vencedores.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Esportes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Esta superprodução recria o cenário e as dinâmicas do famoso programa de TV. Você pode exibir seu Academia com instrutor, pista de cooper, quadra poliesportiva e mesas de pingue-pongue animam a viagem. no palco ou ainda participar na plateia, escolhendo os vencedores.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Simulador de Grand Prix</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Aqui você vive a emoção de um verdadeiro piloto de Fórmula 1.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Noites de festa</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>Entre as experiências reservadas à diversão dos adultos, se destacam as grandes festas temáticas “La Notte Bianca” (festival do branco) e “La Notte in Maschera” (inspirado no Carnaval de máscaras de Veneza).</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Recreação</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O entretenimento para crianças e adolescentes de 3 a 17 anos tem acompanhamento de recreadores.</p>
+                                                    </div>
+                                                </div>                                                     
+                                            </div>
+                                        </div>
+
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde transparent">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                        
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Peppa Pig</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>A Peppa Pig™ é a grande novidade exclusiva que anima as crianças, com duas atrações a cada cruzeiro: “Peppa Pirate’s Party”, com fantasia e caça ao tesouro, e o “Meet & Greet”, com festa de bolhas de sabão e balões, além de uma área com decoração temática que envolve e diverte as crianças a bordo.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Mais entretenimento</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O cinema 4D, o espaço virtual Teen Games e o toboágua tornam a viagem ainda mais divertida.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Atividades noturnas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O navio tem festas temáticas nos salões e na área da piscina, música ao vivo nos bares, diversos shows no teatro, cassino e baladas na discoteca.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Compras</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Visite as lojas e aproveite os preços livres de impostos.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Samsara Spa</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Um consultor está sempre disponível para ajudar no seu bem-estar após um dia inteiro de diversão, com banhos de sol no solário, massagens terapêuticas e utilização da piscina de talassoterapia.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Gastronomia</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Estão incluídas cinco refeições diárias: café da manhã, almoço, lanche da tarde, jantar e snacks da madrugada. O restaurante Duca di Borgogna, um dos principais do navio, tem dois andares e oferece uma deliciosa seleção de aperitivos, entradas, pratos principais e sobremesas. O restaurante Duca d’Orléans conta com dois andares, serve café da manhã, almoço e jantar à la carte. Já o restaurante Ca’d’Oro tem ambiente mais informal que os restaurantes principais, tem estilo bufê no café da manhã, no almoço e no jantar. Oferece carnes, lanches, pizzas, massas, saladas, sobremesas e frutas.</p>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').click(function(){
+                                                if(!$(this).hasClass('ativo')){
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').removeClass('ativo');
+                                                    $(this).addClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                    $(this).parent().find('.cruzeiros-accordion-content').stop().slideDown();
+                                                }else{
+                                                    $(this).removeClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                }
+                                                
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-secao-50-50 cruzeiro-secao-60-40">
+                                            <div class="cruzeiro-coluna-60 club-favolosa">
+                                                <img src="img-cruzeiros/favolosa/club-favolosa-1.png" />
+                                                <img src="img-cruzeiros/favolosa/club-favolosa-2.png" />
+                                            </div>
+                                            <div class="cruzeiro-coluna-40">
+                                                <p>
+                                                    Aproveite ainda o <strong>Club Favolosa</strong>, com culinária contemporânea e que exige reserva e pagamento de taxa extra. O <strong>restaurante Samsara</strong> oferece pratos leves e saudáveis, com ingredientes especiais e modernas técnicas de cozinha. Mediante reserva e pagamento de taxa extra.
+                                                </p>
+                                            </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="lp-cruzeiros-footer">
+            <div class="container">
+                <h3>FORMAS DE <strong>PAGAMENTO</strong></h3>
+                <ul>
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/cartao.png" >
+                        <span>Parcele no <strong>cartão</strong><br>c/ ou s/ entrada</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/boleto.png" >
+                        <span><strong>Boleto</strong><br>bancário</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/avista.png" >
+                        <span>Pagamento<br><strong>à vista</strong></span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/2cartoes.png" >
+                        <span>Combinação<br><strong>de 2 cartões</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+                $('.cruzeiro-iniciar-carrossel.owl-carousel').owlCarousel({
+                    loop:true,
+                    nav:false,
+                    dots: true,
+                    singleItem: true,
+                    autoplay: true,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                })
+            </script>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/helper.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style_crm.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href='https://www.submarinoviagens.com.br/travel/Styles_B2C/jquery-ui.css?v=20180202' rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog-theme-default.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/DrpBox.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/footer.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/social-login.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/services.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/login-timeout.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/styles_sub.css" rel="stylesheet" />
+    
+
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/header_site.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+</head>
+<body ng-app="siteCVC" id="Body1">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/app.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/responsiveboilerplate.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/intercambio/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- SITE-HEADER BEGIN -->
+    <header class="site-header" ng-app="general">
+        <div class="site-header-top clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+                        <div class="pl logo-site clearshadow">
+                            <a href="http://www.submarinoviagens.com.br">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo.png" alt="" width="102" height="75">
+                            </a>
+                        </div>
+                        <!-- / .logo-site -->
+                        <div class="pl logo-smallest">
+                            <a href="http://www.submarino.com.br" target="_blank">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo-smallest.png" alt="" width="86" height="22">
+                            </a>
+                        </div>
+                        <!-- / .logo-smallest -->
+                        <div class="pr">
+                            <ul class="list-info">
+                                <li>
+                                    <span>Televendas: <b>11 3003-2989</b></span>
+                                </li>
+
+                                
+                                
+                                <li>
+                                    <a href="https://www.submarinoviagens.com.br/login" target="_blank">Meus pedidos</a>
+                                </li>
+                            </ul>
+                            <!-- / .list-info -->
+                        </div>
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-top -->
+        <div class="site-header-middle clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+
+                        <div class="clear-header"></div>
+
+                        <div class="pl main-navigation">
+                            <ul>
+                                <li><a href="/passagens-aereas">passagens</a></li>
+                                <li><a href="/pacotes-turisticos">pacotes</a></li>                                    
+                                <li><a href="/hotel">hotéis</a></li>
+                                <li><a href="/resorts">resorts</a></li>
+                                <li><a href="/aluguel-de-carros">carros</a></li>
+                                
+                                <li><a href="/ingressos">ingressos</a></li>
+                                <li><a href="/promocoes">promoções</a></li>
+                                <li><a href="/promocoes/oferta-do-dia">oferta wow</a></li>
+                            </ul>
+                        </div>
+                        <!-- / .main-navigation -->
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-middle -->
+    </header>
+    <input type="hidden" value="1" id="agencyId" />
+    <input type="hidden" value="3" id="searchTypeFull" />
+
+    <div id="overlay" class="trace-manager-overlay"></div>
+    <div id="modal-opacity" class="ui-widget-overlay hide"></div>
+
+    <form id="continueForm" method="post" action="../MasterPricer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        <link href="lp-cruzeiros-2018.css" rel="stylesheet" />
+        
+
+
+        <div id="cruzeiro-banner" data-parallax="scroll" data-image-src="bg-cruzeiros.png"></div>
+        <div class="cruzeiro-menu">
+            <ul>
+                <li>
+                    <a href="#">Planeje seu Cruzeiro</a>
+                </li>
+                <li>
+                    <a href="#">Experiência a Bordo</a>
+                </li>
+                <li>
+                    <a href="#">Escolha seu Navio</a>
+                </li>
+                <li>
+                    <a href="#">Perguntas Frequentes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="siteContent">
+            <input id="InterfaceEnvelope" type="hidden" name="InterfaceEnvelope" />
+            <input id="Culture" type="hidden" name="Culture" />
+            <input id="SearchType" type="hidden" name="SearchType" />
+            <input id="Currency" type="hidden" name="Currency" />
+            <input id="ExchangeRate" type="hidden" name="ExchangeRate" />
+            <input id="SelectedCurrency" type="hidden" name="SelectedCurrency" />
+            <input id="QueryString" type="hidden" name="QueryString" />
+            
+                <div class="container lp-cruzeiros-container">
+                
+
+                    <div class="conteudo">
+                        <div class="lp-cruzeiros-2018">
+                            <div class="cruzeiros-topo">
+                                <h1 class="page-title">Escolha <strong>seu navio</strong></h1>
+                                <p>Temos o navio certo para seu estilo de viagem. Confira nossas opções e embarque agora:</p>
+                                <a href="tel:+551130032989" class="botao-reserve">
+                                    Reserve seu <span>Cruzeiro</span>(11) 3003-2989
+                                </a>
+                            </div>
+
+                            <div class="cruzeiros-meio">
+                                <div class="lista-de-cruzeiros">
+                                    <div class="cruzeiro">
+                                        <div class="tag">
+                                            <div class="empresa empresa-pullmantur"></div>
+                                            <div class="data">Saída: 28/02</div>
+                                        </div>
+                                        <div class="cruzeiro-imagens owl-carousel">
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/soberano/soberano-piscina.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/soberano/soberano-navio.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/soberano/soberano-cassino.png')"></div>
+                                        </div>
+                                        <h2 class="cruzeiro-nome">Cruzeiro Soberano</h2>
+                                        <div class="cruzeiro-info">
+                                            <div class="cruzeiro-dias-rota">
+                                                <div class="cruzeiro-dias">
+                                                    5 dias
+                                                </div>
+                                                <div class="cruzeiro-rota">
+                                                    <ul>
+                                                        <li>Santos</li>
+                                                        <li>Rio de Janeiro</li>
+                                                        <li>Balneário Camboriú</li>
+                                                        <li>Santos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cruzeiro-preco-cta">
+                                                <div class="cruzeiro-preco"><span>R$</span> 1.953</div>
+                                                <a href="cruzeiro-soberano.html" class="cruzeiro-cta">Ver + Detalhes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cruzeiro">
+                                        <div class="tag">
+                                            <div class="empresa empresa-costa"></div>
+                                            <div class="data">Saída: 25/02</div>
+                                        </div>
+                                        <div class="cruzeiro-imagens owl-carousel">
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/favolosa/Foto-1.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/favolosa/Foto-2.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/favolosa/Foto-3.png')"></div>
+                                        </div>
+                                        <h2 class="cruzeiro-nome">Cruzeiro Costa Favolosa</h2>
+                                        <div class="cruzeiro-info">
+                                            <div class="cruzeiro-dias-rota">
+                                                <div class="cruzeiro-dias">
+                                                    7 dias
+                                                </div>
+                                                <div class="cruzeiro-rota">
+                                                    <ul>
+                                                        <li>Santos</li>
+                                                        <li>Búzios</li>
+                                                        <li>Salvador</li>
+                                                        <li>Ilhabela</li>
+                                                        <li>Santos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cruzeiro-preco-cta">
+                                                <div class="cruzeiro-preco"><span>R$</span> 1.799</div>
+                                                <a href="cruzeiro-favolosa.html" class="cruzeiro-cta">Ver + Detalhes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="cruzeiro">
+                                        <div class="tag">
+                                            <div class="empresa empresa-msc"></div>
+                                            <div class="data">Saída: 27/02</div>
+                                        </div>
+                                        <div class="cruzeiro-imagens owl-carousel">
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/preziosa/Foto-3.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/preziosa/Foto-2.png')"></div>
+                                            <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/preziosa/Foto-1.png')"></div>
+                                        </div>
+                                        <h2 class="cruzeiro-nome">Cruzeiro MSC Preziosa</h2>
+                                        <div class="cruzeiro-info">
+                                            <div class="cruzeiro-dias-rota">
+                                                <div class="cruzeiro-dias">
+                                                    8 dias
+                                                </div>
+                                                <div class="cruzeiro-rota">
+                                                    <ul>
+                                                        <li>Santos</li>
+                                                        <li>Búzios</li>
+                                                        <li>Salvador</li>
+                                                        <li>Ilhéus</li>
+                                                        <li>Ilha Grande</li>
+                                                        <li>Santos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cruzeiro-preco-cta">
+                                                <div class="cruzeiro-preco"><span>R$</span> 2.269</div>
+                                                <a href="cruzeiro-preziosa.html" class="cruzeiro-cta">Ver + Detalhes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="cruzeiro">
+                                            <div class="tag">
+                                                <div class="empresa empresa-msc"></div>
+                                                <div class="data">Saída: 28/02</div>
+                                            </div>
+                                            <div class="cruzeiro-imagens owl-carousel">
+                                                <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/magnifica/Foot-3.png')"></div>
+                                                <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/magnifica/Foto-2.png')"></div>
+                                                <div class="cruzeiro-imagem" style="background-image: url('img-cruzeiros/magnifica/Foto-1.png')"></div>
+                                            </div>
+                                            <h2 class="cruzeiro-nome">Cruzeiro MSC Magnifica</h2>
+                                            <div class="cruzeiro-info">
+                                                <div class="cruzeiro-dias-rota">
+                                                    <div class="cruzeiro-dias">
+                                                        8 dias
+                                                    </div>
+                                                    <div class="cruzeiro-rota">
+                                                        <ul>
+                                                            <li>Santos</li>
+                                                            <li>Punta Del Este</li>
+                                                            <li>Buenos Aires</li>
+                                                            <li>Montevidéu</li>
+                                                            <li>Santos</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiro-preco-cta">
+                                                    <div class="cruzeiro-preco"><span>R$</span> 2.559</div>
+                                                    <a href="cruzeiro-magnifica.html" class="cruzeiro-cta">Ver + Detalhes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <script>
+                                        $('.cruzeiro-imagens.owl-carousel').owlCarousel({
+                                            loop:true,
+                                            nav:false,
+                                            dots: true,
+                                            singleItem: true,
+                                            autoplay: true,
+                                            responsive:{
+                                                0:{
+                                                    items:1
+                                                },
+                                                600:{
+                                                    items:1
+                                                },
+                                                1000:{
+                                                    items:1
+                                                }
+                                            }
+                                        })
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="lp-cruzeiros-footer">
+            <div class="container">
+                <h3>FORMAS DE <strong>PAGAMENTO</strong></h3>
+                <ul>
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/cartao.png" >
+                        <span>Parcele no <strong>cartão</strong><br>c/ ou s/ entrada</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/boleto.png" >
+                        <span><strong>Boleto</strong><br>bancário</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/avista.png" >
+                        <span>Pagamento<br><strong>à vista</strong></span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/2cartoes.png" >
+                        <span>Combinação<br><strong>de 2 cartões</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cruzeiro-formulario">
+            <div class="texto-intro">
+                <div class="fechar">X</div>
+                Preencha o formulário para nosso consultor de vendas entrar em contato:
+            </div>
+            <label>
+                Nome: *
+                <input name="nome" type="text" placeholder="Digite seu nome" class="obrigatorio" >
+            </label>
+            <label>
+                E-mail: *
+                <input name="email" type="email" placeholder="Digite seu e-mail" class="obrigatorio">
+            </label>
+            <label>
+                Telefone: *
+                <input name="email" type="email" placeholder="Digite seu telefone" class="obrigatorio" >
+            </label>
+            <label>
+                Melhor horário para contato: *
+                <input name="email" type="email" placeholder="Digite o melhor horário para a gente te ligar" class="obrigatorio" >
+            </label>
+            <label>
+                Dúvidas: *
+                <textarea name="duvidas" placeholder="Digite aqui suas dúvidas" class="obrigatorio"></textarea>
+            </label>
+            <a href="#" class="botao-enviar">Enviar Mensagem</a>
+        </div>
+        <div class="cruzeiro-backdrop"></div>
+
+        <script>
+            $('.botao-reserve').click(function(event){
+                event.preventDefault();
+                $('body').addClass('no-scroll');
+                $('.cruzeiro-backdrop').fadeIn();
+                $('.cruzeiro-formulario').show().animate({
+                    top: '25px'
+                },500)
+            })
+
+            $('.cruzeiro-backdrop, .cruzeiro-formulario .fechar' ).click(function(){
+                $('body').removeClass('no-scroll');
+                $('.cruzeiro-backdrop').fadeOut();
+                $('.cruzeiro-formulario').animate({
+                    top: '-500px'
+                },500).hide();
+            })
+            $('.cruzeiro-formulario .obrigatorio').blur(function(){
+                if($(this).val() != ""){
+                    $(this).removeClass('erro');
+                }
+            })
+            $('.cruzeiro-formulario .botao-enviar').click(function(event){
+                event.preventDefault();
+
+                erro = 0;
+                $('.cruzeiro-formulario .obrigatorio').each(function(a,b){
+                    var valor = $(b).val();
+                    if(valor == ""){
+                        $(b).addClass('erro')
+                        erro += 1 ;
+                    }else{
+                        $(b).removeClass('erro')
+                    }
+                })
+
+                if(erro > 0){
+                    return false;
+                }else{
+                    alert('Formulario enviado')
+                }
+
+            })
+        </script>
+    </form>
+    </body>
+</html>

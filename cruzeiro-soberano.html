@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cruzeiro Soberano</title>
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/helper.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/style_crm.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href='https://www.submarinoviagens.com.br/travel/Styles_B2C/jquery-ui.css?v=20180202' rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/ngDialog-theme-default.css?v=20180202" rel="stylesheet">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/DrpBox.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/footer.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/css/social-login.css?v=20180202" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/services.css?v=20180202" rel="stylesheet" type="text/css" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/login-timeout.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/styles_sub.css" rel="stylesheet" />
+    
+
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/header_site.css?v=20180202" rel="stylesheet" type="text/css" />
+    
+</head>
+<body ng-app="siteCVC" id="Body1">
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/app.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/submarino/responsiveboilerplate.css" rel="stylesheet" />
+    <link href="https://www.submarinoviagens.com.br/travel/Styles_B2C/intercambio/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- SITE-HEADER BEGIN -->
+    <header class="site-header" ng-app="general">
+        <div class="site-header-top clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+                        <div class="pl logo-site clearshadow">
+                            <a href="http://www.submarinoviagens.com.br">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo.png" alt="" width="102" height="75">
+                            </a>
+                        </div>
+                        <!-- / .logo-site -->
+                        <div class="pl logo-smallest">
+                            <a href="http://www.submarino.com.br" target="_blank">
+                                <img src="https://www.submarinoviagens.com.br/travel/Styles_B2C/images/submarino/logo-smallest.png" alt="" width="86" height="22">
+                            </a>
+                        </div>
+                        <!-- / .logo-smallest -->
+                        <div class="pr">
+                            <ul class="list-info">
+                                <li>
+                                    <span>Televendas: <b>11 3003-2989</b></span>
+                                </li>
+
+                                
+                                
+                                <li>
+                                    <a href="https://www.submarinoviagens.com.br/login" target="_blank">Meus pedidos</a>
+                                </li>
+                            </ul>
+                            <!-- / .list-info -->
+                        </div>
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-top -->
+        <div class="site-header-middle clearfix">
+            <div class="container">
+                <div class="col-group">
+                    <div class="col-dt-12">
+
+                        <div class="clear-header"></div>
+
+                        <div class="pl main-navigation">
+                            <ul>
+                                <li><a href="/passagens-aereas">passagens</a></li>
+                                <li><a href="/pacotes-turisticos">pacotes</a></li>                                    
+                                <li><a href="/hotel">hotéis</a></li>
+                                <li><a href="/resorts">resorts</a></li>
+                                <li><a href="/aluguel-de-carros">carros</a></li>
+                                
+                                <li><a href="/ingressos">ingressos</a></li>
+                                <li><a href="/promocoes">promoções</a></li>
+                                <li><a href="/promocoes/oferta-do-dia">oferta wow</a></li>
+                            </ul>
+                        </div>
+                        <!-- / .main-navigation -->
+                    </div>
+                    <!-- / .col-dt-12 -->
+                </div>
+                <!-- / .col-group -->
+            </div>
+        </div>
+        <!-- / .site-header-middle -->
+    </header>
+    <input type="hidden" value="1" id="agencyId" />
+    <input type="hidden" value="3" id="searchTypeFull" />
+
+    <div id="overlay" class="trace-manager-overlay"></div>
+    <div id="modal-opacity" class="ui-widget-overlay hide"></div>
+
+    <form id="continueForm" method="post" action="../MasterPricer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        <link href="lp-cruzeiros-2018.css" rel="stylesheet" />
+        
+
+
+        <div id="cruzeiro-banner" data-parallax="scroll" data-image-src="bg-cruzeiros.png"></div>
+        <div class="cruzeiro-menu">
+            <ul>
+                <li>
+                    <a href="#">Planeje seu Cruzeiro</a>
+                </li>
+                <li>
+                    <a href="#">Experiência a Bordo</a>
+                </li>
+                <li>
+                    <a href="#">Escolha seu Navio</a>
+                </li>
+                <li>
+                    <a href="#">Perguntas Frequentes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="siteContent">
+            <input id="InterfaceEnvelope" type="hidden" name="InterfaceEnvelope" />
+            <input id="Culture" type="hidden" name="Culture" />
+            <input id="SearchType" type="hidden" name="SearchType" />
+            <input id="Currency" type="hidden" name="Currency" />
+            <input id="ExchangeRate" type="hidden" name="ExchangeRate" />
+            <input id="SelectedCurrency" type="hidden" name="SelectedCurrency" />
+            <input id="QueryString" type="hidden" name="QueryString" />
+            
+                <div class="container lp-cruzeiros-container">
+                
+
+                    <div class="conteudo">
+                        <div class="lp-cruzeiros-2018">
+                            <div class="cruzeiros-topo">
+                                <h1 class="page-title">Cruzeiro <strong>Soberano</strong></h1>
+                                <a href="#" class="botao-reserve botao-formulario"> 
+                                        Clique aqui para <span>reservar o cruzeiro</span>
+                                        
+                                </a>
+                            </div>
+
+                            <div class="cruzeiros-meio">
+                                <div class="cruzeiro-interna">
+                                    <div class="cruzeiro-texto">
+                                            <p>Único navio da temporada brasileira que funciona no sistema <strong>All Inclusive</strong>, o <strong>Soberano</strong> proporciona várias opções de entretenimento para todos os públicos e gostos. Os jovens podem curtir a sala de jogos e a quadra esportiva, os aventureiros encaram a parede de escalada, a criançada e os adolescentes têm um animado espaço exclusivamente feito para eles. O navio conta ainda com <strong>bares, teatro</strong> estilo Broadway, <strong>cassino, discoteca, spa, hidromassagem, piscina</strong> e <strong>salão de beleza</strong>.</p>
+                                            
+                                            <p>Todos os roteiros do navio começam em <strong>Santos</strong> e no <strong>Rio de Janeiro</strong>, permitindo embarque nas duas cidades. A maioria dos itinerários é de cruzeiros com quatro noites para <strong>Búzios</strong> ou <strong>Balneário Camboriú</strong>. As viagens curtas são ideais para quem quer experimentar um cruzeiroou para quem não tem muitos dias de folga. Esses cruzeiros mais curtinhos também são excelentes para eventos corporativos, cerimônias de casamento, viagens de formatura e festas de debutantes.</p>  
+                                    </div>
+                                    <div class="cruzeiro-galeria">
+                                        <div class="cruzeiro-carrossel cruzeiro-iniciar-carrossel owl-carousel">
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/tibuclub_1.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/_MG_1970.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/_34Q4355.png')"></div>
+                                            <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/casino.png')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-roteiro">
+                                        <div class="cruzeiro-tag-title">
+                                            Roteiro
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <center>
+                                        <ul class="cruzeiro-roteiro-pins">
+                                            <li>
+                                                <a href="#santos" class="ativo"><span class="icone"></span> Santos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#riodejaneiro"><span class="icone"></span> Rio de Janeiro</a>
+                                            </li>
+                                            <li>
+                                                <a href="#balneariocamboriu"><span class="icone"></span> Balneário Camboriu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#santos"><span class="icone"></span> Santos</a>
+                                            </li>
+                                        </ul>
+                                        </center>
+                                        <div class="cruzeiro-roteiro-conteudo">
+                                            <div class="cruzeiro-roteiro-conteudo-item ativo" data-rota="santos">
+                                                <div class="item-content">
+                                                    <h2>Santos</h2>
+                                                    <p>
+                                                       Maior e principal cidade do litoral paulista, <strong>Santos</strong> é ponto de embarque de muitos cruzeiros e vale muito a pena tirar umas horinhas para conhecer suas praias e patrimônio histórico. A cidade <strong>abriga o maior porto</strong> da América Latina, conta com vários programas culturais e artísticos, além da orla urbanizada, <strong>teatros</strong>, <strong>praças</strong> e a charmosa <strong>Linha Turística do Bonde</strong>.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/santos.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="riodejaneiro">
+                                                <div class="item-content">
+                                                    <h2>Rio de Janeiro</h2>
+                                                    <p>
+                                                            A <strong>Cidade Maravilhosa</strong> é um dos principais destinos de turismo do país. Com praias icônicas – Copacabana e Ipanema foram eternizadas em muitas canções – <strong>bairros charmosos</strong> e boêmios, lagos, áreas verdes, estádios de futebol, a Cidade do Samba, além de muitos bares e restaurantes e eventos imperdíveis, o Rio de Janeiro é um dos pontos de paradas mais incríveis dos cruzeiros nacionais.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/riodejaneiro.png')"></div>
+                                            </div>
+                                            <div class="cruzeiro-roteiro-conteudo-item" data-rota="balneariocamboriu">
+                                                <div class="item-content">
+                                                    <h2>Balneário Camboriu</h2>
+                                                    <p>
+                                                        Cidade catarinense esbanja belezas naturais. Emoldurada pela Mata Atlântica e pelo mar, Balneário Camboriú é um dos destaques do turismo em Santa Catarina. Um dos pontos turísticos mais belos é o de teleférico, que leva ao topo de uma montanha e termina na praia de Laranjeiras. A cidade é famosa também pela vida noturna agitada no verão e pelas águas cristalinas das praias.
+                                                    </p>
+                                                </div>
+                                                <div class="item-imagem" style="background-image: url('img-cruzeiros/soberano/balneario.png')"></div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiro-roteiro-pins li a').click(function(){
+                                                $('.cruzeiro-roteiro-pins li a').removeClass('ativo');
+                                                $(this).addClass('ativo');
+                                                let pinSelecionado = $(this).attr('href').replace('#','');
+                                                $('.cruzeiro-roteiro-conteudo-item').removeClass('ativo');
+                                                $('.cruzeiro-roteiro-conteudo-item[data-rota='+pinSelecionado+']').addClass('ativo');
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="cruzeiro-ficha-tecnica">
+                                        <div class="cruzeiro-tag-title">
+                                            Ficha Técnica
+                                        </div>
+                                        <div class="divisor"></div>
+                                        <ul>
+                                            <li><strong>Cia marítima:</strong> Pullmantur</li>
+                                            <li><strong>Tonelagem:</strong> 73.592</li>
+                                            <li><strong>Velocidade em nós:</strong> 17</li>
+                                            <li><strong>Comprimento:</strong> 268 metros</li>
+                                            <li><strong>Passageiros:</strong> 2.733</li>
+                                            <li><strong>Tripulação:</strong> 820</li>
+                                            <li><strong>Decks:</strong> 12</li>
+                                            <li><strong>Voltagem:</strong> 110/220 volts</li>
+                                            <li><strong>Número de cabines:</strong> 1.162</li>
+                                        </ul>
+                                    </div>
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                                <div class="cruzeiro-carrossel carrossel-inativo">
+                                                    <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/royal-suite-salon.png')"></div>
+                                                    <div class="cruzeiro-carrossel-item" style="background-image: url('img-cruzeiros/soberano/suite-luxo.png')"></div>
+                                                </div>
+                                        </div>
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-rosa">Cabines</h2>
+                                            <p>Todas as cabines do Soberano têm secador de cabelo, TV,telefone, cofre, ar-condicionado, amplo armário e cama de casal conversível em duas camas de solteiro. Algumas acomodam até quatro pessoas. As suítes têm frigobar.</p>
+                                            <p><strong class="fonte-rosa">Interna:</strong> com 12 m², proporciona ótimo <strong>custo/benefício</strong>.</p>
+                                            <p><strong class="fonte-rosa">Externa:</strong> com 13 m², tem escotilha com vista para o mar.</p>
+                                            <p><strong class="fonte-rosa">Externa Luxo:</strong> espaçosa cabine com <strong>15m²</strong> e vista para o mar.</p>
+                                            <p><strong class="fonte-rosa">Suíte Júnior com Varanda:</strong> com <strong>24 m²</strong>, tem varanda, cama de casal, sofá-cama de solteiro e banheira.</p>
+                                            <p><strong class="fonte-rosa">Gran Suíte com Varanda:</strong> com <strong>35 m²</strong>, tem varanda, cama de casal, sofá-cama e banheira. </p>
+                                            <p><strong class="fonte-rosa">Suíte Luxo com Varanda:</strong> com <strong>41 m²</strong>, possui varanda de <strong>12 m²</strong>, sala de estar, banheira e dois quartos, cama king size e sofá-cama de casal.</p>
+                                            <p><strong class="fonte-rosa">Suíte Luxo com Varanda:</strong> com <strong>62 m²</strong> de área, essa suíte tem varanda de <strong>13 m²</strong>, sala de estar, banheira, dois quartos, cama king size e sofá-cama de casal.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divisor"></div>
+
+                                    <div class="cruzeiro-secao-50-50">
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde">Recreação diária</h2>
+                                            <div class="cruzeiros-accordion">
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Recreação diária</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>As atividades para a família inteira incluem gincanas, torneios, aulas de dança e ginástica, workshops de artesanato, olimpíadas aquáticas e muito mais.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Área de piscinas</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Adultos e crianças se refrescam nas duas piscinas do Soberano ou aproveitam o sol nas espreguiçadeiras. As duas hidromassagens proporcionam momentos de relaxamento para toda a família.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Esportes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Academia, parede de escalada, quadra de esportes e pista de corrida são ótimas opções para quem gosta de esporte e aventura.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Clube para adolescentes</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Jovens de 12 a 17 anos têm seu próprio espaço no Teen’s Club, área com games e fliperamas.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Clubes infantis</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                    <p>As crianças se divertem muito com a supervisão dos profissionais no Tibu Club (para a faixa etária de 3 a 6 anos) e no Capi Club (de 7 a 11 anos).</p>
+                                                    </div>
+                                                </div>                                                  
+                                            </div>
+                                        </div>
+
+                                        <div class="cruzeiro-coluna-50">
+                                            <h2 class="fonte-verde transparent">O que fazer?</h2>
+                                            <div class="cruzeiros-accordion">
+                                        
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Spa del Mar</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>O navio tem um spa com técnicas inovadoras para hidratação capilar, terapias faciais e curativas, esfoliações, massagens especiais e muito mais. Os serviços são pagos à parte.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Entretenimento noturno</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Variados ritmos embalam a diversão na discoteca Zoom, e os baladeiros aprendem a dançar com os recreadores. Já o grande teatro apresenta diariamente diferentes espetáculos, com bandas, músicos, bailarinos, cantores, mágicos e comediantes.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Cassino del Mar</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>No cassino, os clientes se divertem nos caça-níqueis, no videopôquer, no match play e nas apostas esportivas ao vivo.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Compras</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Nas lojas duty free, é possível comprar artigos importados como roupas, perfumes, eletrônicos e relógios. Todos os gastos a bordo podem ser parcelados em até cinco vezes, em reais, nos cartões de crédito Visa e MasterCard.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cruzeiros-accordion-panel">
+                                                    <strong>Gastronomia</strong>
+                                                    <div class="cruzeiros-accordion-content">
+                                                        <p>Os restaurantes El Guadiana e El Duero servem café da manhã, almoço e sofisticado jantar. Os pratos são inspirados na culinária mediterrânea, com carnes, frutos do mar, sobremesas, frutas, queijos e sorvetes. O The Grill fica no deck acima da piscina e oferece sanduíches, como hambúrguer e cachorro-quente, carnes, saladas e fritas. É ideal para um lanche durante o dia na piscina. Nesse ambiente também são servidos os snacks da madrugada.</p>
+                                                        <p>
+                                                            O 360° Bar Lounge conta com uma deslumbrante vista para o mar, possui amplo espaço, servindo deliciosos cafés e coquetéis. O Buffet Panorama é ideal para quem está na piscina e quer comer em um lugar mais informal sem ter que trocar de roupa. O bufê self-service oferece pratos quentes, saladas, lanches, sobremesas, frutas e fast-food.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').click(function(){
+                                                if(!$(this).hasClass('ativo')){
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel strong').removeClass('ativo');
+                                                    $(this).addClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                    $(this).parent().find('.cruzeiros-accordion-content').stop().slideDown();
+                                                }else{
+                                                    $(this).removeClass('ativo');
+                                                    $('.cruzeiros-accordion .cruzeiros-accordion-panel .cruzeiros-accordion-content').stop().slideUp();
+                                                }
+                                                
+                                            })
+                                        </script>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-secao-50-50">
+                                            <div class="cruzeiro-coluna-50">
+                                                <img src="img-cruzeiros/soberano/_34Q3928.png" />
+                                            </div>
+                                            <div class="cruzeiro-coluna-50">
+                                                <h2 class="fonte-rosa">O que está incluído?</h2>
+                                                <p>
+                                                    O Soberano é o <strong>único navio</strong> na temporada brasileira com <strong>sistema Tudo Incluído</strong>:
+                                                </p>
+                                                <ul>
+                                                    <li><span class="fonte-rosa">•</span> Café da manhã</li>
+                                                    <li><span class="fonte-rosa">•</span>  Almoço</li>
+                                                    <li><span class="fonte-rosa">•</span>  Lanche da tarde</li>
+                                                    <li><span class="fonte-rosa">•</span>  Jantar nos restaurantes principais e bufê</li>
+                                                    <li><span class="fonte-rosa">•</span>  Snacks da madrugada</li>
+                                                    <li><span class="fonte-rosa">•</span>  Bebidas alcoólicas e não alcoólicas: refrigerantes e sucos servidos em copo, cafés, chás, cervejas nacionais, uísque 8 anos, vinhos branco e tinto, espumante, vermouts, conhaques, licores, vodca, rum, gim, tequila e vários coquetéis.</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+
+                                    <div class="divisor"></div>
+
+
+                                    <div class="cruzeiro-secao-50-50">
+                                            <div class="cruzeiro-coluna-50">
+                                                <h2 class="fonte-rosa">The Waves</h2>
+                                                <p>
+                                                    O conjunto de benefícios exclusivos para os <strong>hóspedes das suítes</strong> inclui:
+                                                </p>
+                                                <ul>
+                                                    <li><span class="fonte-rosa">•</span> Acesso a uma área privativa, com um bar que serve aperitivos</li>
+                                                    <li><span class="fonte-rosa">•</span> Embarque e desembarque prioritários</li>
+                                                    <li><span class="fonte-rosa">•</span> Snacks e frutas todo dia na cabine</li>
+                                                    <li><span class="fonte-rosa">•</span> Amenities de banho premium</li>
+                                                    <li><span class="fonte-rosa">•</span> Roupão e chinelos</li>
+                                                    <li><span class="fonte-rosa">•</span> Festa VIP.</li>
+                                                    <li><span class="fonte-rosa">•</span> Wi-fi gratuito na área privativa, com limite (exceto na Junior Suíte).</li>
+                                                    <li><span class="fonte-rosa">•</span> Pacote de bebidas premium (exceto na Junior Suíte).</li>
+                                                </ul>
+                                            </div>
+                                            <div class="cruzeiro-coluna-50">
+                                                <img src="img-cruzeiros/soberano/discoteca.png" />
+                                            </div>
+                                            
+                                    </div>
+
+                                    <div class="divisor"></div>
+                                    <div class="cruzeiro-secao-50-50">
+                                            <div class="cruzeiro-coluna-50">
+                                                <img src="img-cruzeiros/soberano/bar-panorama.png" />
+                                            </div>
+                                            <div class="cruzeiro-coluna-50">
+                                                <h2 class="fonte-rosa">Carta Premium</h2>
+                                                <p>
+                                                        Além das bebidas inclusas no sistema <strong>Tudo Incluído</strong>, o navio tem uma carta de bebidas especiais, com refrigerantes em lata, sucos naturais, uísques 12 anos, cervejas importadas, energéticos e vinhos especiais. É possível adquirir a bordo um pacote delas por um preço muito atrativo.
+                                                </p>
+                                            </div>
+                                    </div>
+
+                                    <div class="divisor"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="lp-cruzeiros-footer">
+            <div class="container">
+                <h3>FORMAS DE <strong>PAGAMENTO</strong></h3>
+                <ul>
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/cartao.png" >
+                        <span>Parcele no <strong>cartão</strong><br>c/ ou s/ entrada</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/boleto.png" >
+                        <span><strong>Boleto</strong><br>bancário</span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/avista.png" >
+                        <span>Pagamento<br><strong>à vista</strong></span>
+                    </li>
+
+                    <li>
+                        <img src="img-cruzeiros/pagamentos/2cartoes.png" >
+                        <span>Combinação<br><strong>de 2 cartões</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+                $('.cruzeiro-iniciar-carrossel.owl-carousel').owlCarousel({
+                    loop:true,
+                    nav:false,
+                    dots: true,
+                    singleItem: true,
+                    autoplay: true,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:1
+                        },
+                        1000:{
+                            items:1
+                        }
+                    }
+                })
+            </script>
+    </form>
+    </body>
+</html>
